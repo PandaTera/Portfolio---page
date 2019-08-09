@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/515a24ce13.js"></script>
+    <style>
+
+        /* STYLES */
+    *{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+        background-color: rgba(240, 255, 34, 0.589);
+        color: #2b333b;
+        line-height: 1.6;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 1em;
+    }
+    .container{
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 1em;
+        max-width: 70%;
+        min-height: 70vh;
+        background-color: rgb(49, 182, 206);
+        box-shadow: 14px 20px 46px rgb(23, 116, 133);
+        
+    }
+    .wrapper{
+        margin: 0 20px;
+        padding: 1em;
+        font-size: 10px;
+    }
+    header {
+             
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    header span{
+        color: white;
+        
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        color: rgb(255, 255, 255);
+    }
+main {
+    border-radius: 15px;
+    border: 2px solid rgb(112, 214, 228);
+    box-shadow: 0 0 20px 0 rgb(112, 214, 228);
+}
+.one {
+background-color: 	rgb(223, 22, 213);
+border-bottom: 2px solid grey;
+border-radius: 15px 15px 0 0;
+padding: 1rem 0 1rem 0;
+
+}
+.one h3{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.one ul li{
+    text-align: center;
+    font-weight: 600;
+} 
+.two ul li{
+    text-align: left;
+    font-weight: 600;
+}
+.one ul li i{
+    padding-right: 6px;
+    font-size: 23px;
+}
+.none {
+    display:none;
+}
+
+.three{
+    border-radius: 0 0 15px 15px;
+}
+.two, .three{
+  background-color: #7797e3;
+  padding: 15px 0 0 20px;
+}
+button{
+    background-color: rgb(112, 214, 228);
+    border: none;
+    padding: 4px 0;
+    text-transform: uppercase;
+    font-weight:600;
+    cursor: pointer;
+    transition: .9s ease-out;
+}
+button:hover, button:focus{
+    background-color: rgb(223, 22, 213);
+    color: white;
+    
+}
+footer{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+/* DISPLAY */
+.wrapper form{
+    display: grid;
+    grid-template-rows: 1fr;
+    
+}
+.wrapper .two, .wrapper .three{
+    display: block;
+    line-height: 2rem;
+}
+.three h4, .three span{
+    display: block;
+}
+h4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+    button{
+    display: block;
+    width: 60%;
+    grid-row: 1;
+    width: 90%;
+    margin-bottom: 10px;
+}
+input, textarea{
+    width: 90%;
+    border: 1px solid rgb(112, 214, 228);
+    line-height: 25px;
+}
+form .three span{
+    font-weight:600;
+}
+
+/*Smaller devices */
+
+@media(min-width: 500px){
+    .wrapper{
+        font-size: 16px;
+    }
+    .wrapper form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.none{
+    display: inline-block;
+}
+.two{
+    border-radius: 0 0 0 15px;
+}
+.three{
+    border-radius: 0 0 15px 0;
+}
+.two ul li{
+    text-align: center;
+    
+}
+} 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header><span>Front-end </span>designing</header>
+            <main>
+                <div class="one">
+                    <h3>Front-end Studio</h3>
+                    <ul class="persData">
+                        <li><i class="fas fa-mobile-alt none"></i> 509-575-170</li>
+                        <li><i class="fas fa-envelope-open-text none"></i> romanbonk15@gmail.com</li>
+                    </ul>
+                </div>
+        <form action="">
+            
+        
+                <div class="two">
+                    <h4>Our Services</h4>
+                    <ul class="services">
+                    <li>Creating websites</li>
+                    <li>Polishing layouts</li>
+                    <li>Animating</li>
+                    <li>Translating into English</li>
+                </ul></div>
+                <div class="three">
+                        <h4>Email Us</h4>
+                    <p>
+                        <span>Topic:</span>
+                            <input type="text">
+
+                    </p>
+                    <p>
+                        <span>First name and surname:</span>
+                            <input type="text">
+
+                    </p>
+                    <p class="message">
+                        <span>Message:</span>
+                            <textarea name="message" id="message" cols="20" rows="3"></textarea>
+                            
+                        <button>Submit</button>
+                    </p>
+                </div>
+            </form>
+            </main>
+            <footer>
+                <p><i class="far fa-copyright"></i><strong> Privacy Policy</strong> - the code can be copied and used free of charge.</p>
+            </footer>
+        </div>
+    </div>
+ 
+</body>
+</html>
