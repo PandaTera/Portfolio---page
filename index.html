@@ -72,7 +72,7 @@ padding: 1rem 0 1rem 0;
     font-weight: 600;
 } 
 .two ul li{
-    text-align: left;
+   
     font-weight: 600;
 }
 .one ul li i{
@@ -89,6 +89,13 @@ padding: 1rem 0 1rem 0;
 .two, .three{
   background-color: #7797e3;
   padding: 15px 0 0 20px;
+  display: grid;
+  justify-items: center;
+  }
+  .services li:hover{
+cursor: pointer;
+color:black;
+font-size:x-large;
 }
 button{
     background-color: rgb(112, 214, 228);
@@ -125,6 +132,7 @@ footer{
 h4{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
     button{
     display: block;
     width: 60%;
@@ -141,9 +149,41 @@ form .three span{
     font-weight:600;
 }
 
+.stripe{
+    position: relative;
+    margin: 30px auto;
+  display: flex;
+  background-color: #fff;
+border: 2px solid black;  
+flex-direction: row;
+justify-content: space-between;
+line-height: 40px;
+max-width: 200px;
+overflow: hidden;
+cursor: pointer;
+
+  }
+ 
+  .firstStripe, .secondStripe, .thirdStripe {
+    width: 10px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* margin-right: 4px; */
+  animation: stripe1 8s linear;
+  }
+  .secondStripe{
+    animation: stripe2 8s linear;
+}
+  .thirdStripe{
+    margin-right: 0;
+  animation: stripe3 8s linear;
+  }
 /*Smaller devices */
 
-@media(min-width: 500px){
+@media(min-width: 501px){
     .wrapper{
         font-size: 16px;
     }
@@ -157,6 +197,7 @@ form .three span{
 }
 .two{
     border-radius: 0 0 0 15px;
+    
 }
 .three{
     border-radius: 0 0 15px 0;
@@ -165,7 +206,55 @@ form .three span{
     text-align: center;
     
 }
-} 
+}
+@media(max-width: 500px){
+.services li:hover{
+font-size: 15px;
+}
+}
+    @keyframes stripe1 {
+    0% {background-color: yellow; width:0}
+    33% {background-color: green; width: 30%}
+    50% {background-color: green; width: 50%}
+    66% {background-color: red; width: 30%}
+    100% {background-color: yellow; width: 0}
+}
+@keyframes stripe2 {
+    0% {background-color: red; width: 0}
+    33% {background-color: yellow}
+    50% {background-color: green; width: 25%}
+    66% {background-color: green; width: 40%}
+    100% {background-color: red; width: 0}
+}
+@keyframes stripe3 {
+    0% {background-color: green; width: 0}
+    33% {background-color: violet; width: 30%}
+    50% {background-color: green; width: 50%}
+    55% {background-color: green; width: 50%}
+    66% {background-color: yellow; width: 30%}
+    100% {background-color: green; width: 0}
+}
+@keyframes welcome{
+    0% {opacity: 0}
+    100% { opacity: 1}
+}
+.welcome{
+    position: absolute;
+    display: flex;
+   justify-content: center;
+    width: 100%;
+    height:100%;
+    line-height: 40px;
+    letter-spacing: 1px;
+    opacity: 0;
+    background-image: linear-gradient(grey,rgb(59, 59, 48), green);
+    animation: welcome 3s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+color:white;
+font-weight:600;
+}
+
     </style>
 </head>
 <body>
@@ -190,22 +279,35 @@ form .three span{
                     <li>Polishing layouts</li>
                     <li>Animating</li>
                     <li>Translating into English</li>
-                </ul></div>
+                </ul>
+                <div class="stripe">
+                    <span class="welcome">WELCOME</span>
+                    <div class="firstStripe">
+                        <p class="appar1">Find</p>
+                    </div>
+                    <div class="secondStripe">
+                        <p class="appar2">out</p>
+                    </div>
+                    <div class="thirdStripe">
+                        <p class="appar3">more</p>
+                    </div>
+                </div>
+            </div>
                 <div class="three">
                         <h4>Email Us</h4>
                     <p>
                         <span>Topic:</span>
-                            <input type="text">
+                            <input type="text" placeholder=" Your topic">
 
                     </p>
                     <p>
                         <span>First name and surname:</span>
-                            <input type="text">
+                            <input type="text" placeholder=" Your first name and surname">
 
                     </p>
                     <p class="message">
                         <span>Message:</span>
-                            <textarea name="message" id="message" cols="20" rows="3"></textarea>
+                            <textarea name="message" id="message" cols="20" rows="3" placeholder=" What can we do for you?"></textarea>
                             
                         <button>Submit</button>
                     </p>
